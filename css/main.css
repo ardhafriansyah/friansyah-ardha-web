@@ -494,7 +494,7 @@ select {
 	padding: 1.5rem 0;
 	border: 0;
 	outline: none;
-	vertical-align: middle;
+	vertical-align:middle;
 	color: #313131;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
@@ -2566,3 +2566,20 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.gallery {
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .gallery-container {
+	display: flex;
+	width: 500%;
+	transition: transform 0.5s;
+  }
+  
+  .gallery-container img {
+	width: 20%;
+  }
+  
+  
