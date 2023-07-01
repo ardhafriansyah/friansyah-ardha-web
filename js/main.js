@@ -266,6 +266,56 @@
 
 
  	/*----------------------------------------------------- */
+
+	 const galleryContainer = document.querySelector('.gallery-container');
+	 let startX;
+	 let currentTranslate = 0;
+	 let prevTranslate = 0;
+	 let isDragging = false;
+	 
+	 galleryContainer.addEventListener('mousedown', dragStart);
+	 galleryContainer.addEventListener('touchstart', dragStart);
+	 galleryContainer.addEventListener('mousemove', drag);
+	 galleryContainer.addEventListener('touchmove', dragEnd);
+	 galleryContainer.addEventListener('mouseup', dragEnd);
+	 galleryContainer.addEventListener('touchend', dragEnd);
+	 
+	 function dragStart(event) {
+	   if (event.type === 'touchstart') {
+		 startX = event.touches[0].clientX;
+	   } else {
+		 startX = event.clientX;
+	   }
+	 
+	   isDragging = true;
+	   galleryContainer.classList.add('grabbing');
+	 }
+	 
+	 function drag(event) {
+	   if (!isDragging) return;
+	 
+	   event.preventDefault();
+	 
+	   let x;
+	   if (event.type === 'touchmove') {
+		 x = event.touches[0].clientX;
+	   } else {
+		 x = event.clientX;
+	   }
+	 
+	   const dragDistance = x - startX;
+	   currentTranslate = prevTranslate + dragDistance;
+	 
+	   galleryContainer.style.transform = `translateX(${currentTranslate}px)`;
+	 }
+	 
+	 function dragEnd() {
+	   isDragging = false;
+	   galleryContainer.classList.remove('grabbing');
+	 
+	   prevTranslate = currentTranslate;
+	 }
+	 
   	/* Back to top
    ------------------------------------------------------- */ 
 	var pxShow = 300; // height on which the button will show
@@ -289,3 +339,4 @@
 	});		
 
 })(jQuery);
+
