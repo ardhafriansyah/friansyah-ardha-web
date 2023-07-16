@@ -1759,7 +1759,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
+	background: #000000;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -2499,7 +2499,7 @@ footer .copyright span::after {
 	content: "|";
 	display: inline-block;
 	padding: 0 1rem 0 1.2rem;
-	color: rgba(255, 255, 255, 0.1);
+	color: rgba(0, 0, 0, 0.801);
 }
 footer .copyright span:last-child::after {
 	display: none;
@@ -2567,6 +2567,7 @@ footer .copyright span:last-child::after {
 
 /*# sourceMappingURL=main.css.map */
 
+/* <h5>Portfolio</h5> */
 .gallery {
 	width: 100%;
 	overflow: hidden;
@@ -2581,5 +2582,5 @@ footer .copyright span:last-child::after {
   .gallery-container img {
 	width: 20%;
   }
-  
+  /*  */
   
