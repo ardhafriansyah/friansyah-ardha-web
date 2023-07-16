@@ -420,7 +420,7 @@ img.pull-left {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #4a95cc;
+	background: #ffffff;
 	z-index: 800;
 	height: 100%;
 	width: 100%;
@@ -442,7 +442,7 @@ img.pull-left {
 	border-top: 11px solid rgba(255, 255, 255, 0.1);
 	border-right: 11px solid rgba(255, 255, 255, 0.1);
 	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
-	border-left: 11px solid yellowgreen;
+	border-left: 11px solid rgb(77, 64, 196);
 	-webkit-animation: load 1.5s infinite linear;
 	animation: load 1.5s infinite linear;
 	display: block;
