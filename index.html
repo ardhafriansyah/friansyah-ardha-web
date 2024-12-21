@@ -754,6 +754,42 @@
     </div> -->
     <!-- Map End -->
 
+<!-- Memuat Google API Client -->
+<script async defer src="https://apis.google.com/js/api.js"></script>
+
+<script>
+    // Inisialisasi API dan autentikasi
+    function start() {
+        gapi.client.init({
+            'apiKey': 'AIzaSyDrd95bbkzEW7aGf3PimCrvx18MG_gEj20Ej20', // Masukkan API Key
+            'clientId': '670655641370-e2tco30nuelhekclu7b4fhdu7caua55j.apps.googleusercontent.com', // Masukkan Client ID
+            'scope': 'https://www.googleapis.com/auth/analytics.readonly', 
+            'discoveryDocs': ['https://analyticsreporting.googleapis.com/$discovery/rest?version=v4'],
+        }).then(function () {
+            gapi.client.analyticsreporting.reports.batchGet({
+                "reportRequests": [{
+                    "viewId": "339467302", // Ganti dengan View ID Google Analytics Anda
+                    "dateRanges": [{
+                        "startDate": "7daysAgo", // Misalnya, mengambil data 7 hari terakhir
+                        "endDate": "today"
+                    }],
+                    "metrics": [{
+                        "expression": "ga:users"
+                    }]
+                }]
+            }).then(function(response) {
+                // Ambil jumlah pengunjung dari response dan tampilkan
+                var visitors = response.result.reports[0].data.totals[0].values[0];
+                document.getElementById("visitorCount").innerText = "Jumlah Pengunjung: " + visitors;
+            });
+        });
+    }
+
+    gapi.load('client:auth2', start);
+</script>
+
+<!-- Tempat untuk menampilkan jumlah pengunjung -->
+<div id="visitorCount">Loading visitor count...</div>
 
     <!-- Copyright Start -->
     <div class="container-fluid bg-dark text-white py-4">
