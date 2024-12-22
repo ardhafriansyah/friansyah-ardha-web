@@ -158,7 +158,7 @@
                           <span>ardhafriansyah@gmail.com</span>
                         </li>
                       </ul>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h3 class="lh-base mb-0">Kemampuan Dasar di Luar Konsentrasi</h3>
@@ -545,6 +545,76 @@
                     </div>
                 </div>
     
+ <!-- Portfolio Item 5 -->
+ <div class="col-lg-4 col-md-6 portfolio-item second">
+    <div class="portfolio-img rounded overflow-hidden">
+        <img class="img-fluid" src="sertif/Sertifikat Training Good Laboratory Practice.jpeg" alt="Training Good Laboratory Practice">
+        <div class="portfolio-btn">
+            <!-- Tombol untuk melihat gambar -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="sertif/Sertifikat Training Good Laboratory Practice.jpeg" data-lightbox="portfolio">
+                <i class="fa fa-eye"></i>
+            </a>
+            <!-- Tombol untuk mengunduh gambar -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="sertif/Sertifikat Training Good Laboratory Practice.jpeg" download="iso17025_certificate.jpeg">
+                <i class="fa fa-download"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Item 6 -->
+<div class="col-lg-4 col-md-6 portfolio-item second">
+    <div class="portfolio-img rounded overflow-hidden">
+        <img class="img-fluid" src="sertif/Sertifikat Training Awareness 90012015.jpeg" alt="sertif/Sertifikat Training Awareness 90012015.jpeg">
+        <div class="portfolio-btn">
+            <!-- Tombol untuk melihat gambar -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="sertif/Sertifikat Training Awareness 90012015.jpeg" data-lightbox="portfolio">
+                <i class="fa fa-eye"></i>
+            </a>
+            <!-- Tombol untuk mengunduh gambar -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="sertif/Sertifikat Training Awareness 90012015.jpeg" download="iso17025_certificate.jpeg">
+                <i class="fa fa-download"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Pdf 1 -->
+<div class="col-lg-4 col-md-6 portfolio-item second">
+    <div class="portfolio-img rounded overflow-hidden">
+        <!-- Menampilkan file PDF menggunakan iframe -->
+        <iframe class="img-fluid" src="pdf/ARTIKEL INOVASI TAPE KETAN PUTIH BERBASIS BUAH APEL SEBAGAI RAGI ALAMI.pdf" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+        <div class="portfolio-btn">
+            <!-- Tombol untuk melihat PDF -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="pdf/ARTIKEL INOVASI TAPE KETAN PUTIH BERBASIS BUAH APEL SEBAGAI RAGI ALAMI.pdf" target="_blank">
+                <i class="fa fa-eye"></i>
+            </a>
+            <!-- Tombol untuk mengunduh PDF -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="pdf/ARTIKEL INOVASI TAPE KETAN PUTIH BERBASIS BUAH APEL SEBAGAI RAGI ALAMI.pdf" download="Sertifikat_Training_Awareness_90012015.pdf">
+                <i class="fa fa-download"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Pdf 2 -->
+<div class="col-lg-4 col-md-6 portfolio-item second">
+    <div class="portfolio-img rounded overflow-hidden">
+        <!-- Menampilkan file PDF menggunakan iframe -->
+        <iframe class="img-fluid" src="pdf/MODUL TITRASI ARGENTOMETRI-FAJANS.pdf" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+        <div class="portfolio-btn">
+            <!-- Tombol untuk melihat PDF -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="pdf/MODUL TITRASI ARGENTOMETRI-FAJANS.pdf" target="_blank">
+                <i class="fa fa-eye"></i>
+            </a>
+            <!-- Tombol untuk mengunduh PDF -->
+            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="pdf/MODUL TITRASI ARGENTOMETRI-FAJANS.pdf" download="Sertifikat_Training_Awareness_90012015.pdf">
+                <i class="fa fa-download"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </div>
@@ -754,42 +824,6 @@
     </div> -->
     <!-- Map End -->
 
-<!-- Memuat Google API Client -->
-<script async defer src="https://apis.google.com/js/api.js"></script>
-
-<script>
-    // Inisialisasi API dan autentikasi
-    function start() {
-        gapi.client.init({
-            'apiKey': 'AIzaSyDrd95bbkzEW7aGf3PimCrvx18MG_gEj20Ej20', // Masukkan API Key
-            'clientId': '670655641370-e2tco30nuelhekclu7b4fhdu7caua55j.apps.googleusercontent.com', // Masukkan Client ID
-            'scope': 'https://www.googleapis.com/auth/analytics.readonly', 
-            'discoveryDocs': ['https://analyticsreporting.googleapis.com/$discovery/rest?version=v4'],
-        }).then(function () {
-            gapi.client.analyticsreporting.reports.batchGet({
-                "reportRequests": [{
-                    "viewId": "10076552057", // Ganti dengan View ID Google Analytics Anda
-                    "dateRanges": [{
-                        "startDate": "7daysAgo", // Misalnya, mengambil data 7 hari terakhir
-                        "endDate": "today"
-                    }],
-                    "metrics": [{
-                        "expression": "ga:users"
-                    }]
-                }]
-            }).then(function(response) {
-                // Ambil jumlah pengunjung dari response dan tampilkan
-                var visitors = response.result.reports[0].data.totals[0].values[0];
-                document.getElementById("visitorCount").innerText = "Jumlah Pengunjung: " + visitors;
-            });
-        });
-    }
-
-    gapi.load('client:auth2', start);
-</script>
-
-<!-- Tempat untuk menampilkan jumlah pengunjung -->
-<div id="visitorCount">Loading visitor count...</div>
 
     <!-- Copyright Start -->
     <div class="container-fluid bg-dark text-white py-4">
