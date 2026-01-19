@@ -34,41 +34,40 @@ const resumeData = {
 };
 
 // --- DATA PROJECT ---
-// Path gambar disesuaikan agar membaca dari folder 'public/img'
 const projects = [
   { 
     id: 1, 
     title: "SEED 2025", 
     category: "Kimia & K3", 
-    img: "public/sertif seed 2025 ardha.jpg", 
+    img: "src/assets/img/sertif/sertif seed 2025 ardha.jpg", 
     link: "https://linkedin.com/in/ardha-hafiidh-friansyah-446928265/" 
   },
   { 
     id: 2, 
     title: "Project Design", 
     category: "Desain", 
-    img: "public/projek desain1.jpg", 
+    img: "src/assets/img/sertif/projek desain1.jpg", 
     link: "https://instagram.com/ardhafiidh3/" 
   },
   { 
     id: 3, 
     title: "Sertifikasi K3 Lab", 
     category: "Kimia & K3", 
-    img: "public/k3LAB.jpeg", 
-    link: "#" // Ganti dengan link sertifikat jika ada
+    img: "src/assets/img/sertif/k3LAB.jpeg", 
+    link: "#" 
   },
   { 
     id: 4, 
     title: "ISO 17025", 
     category: "Kimia & K3", 
-    img: "public/iso17025.jpeg", 
+    img: "src/assets/img/sertif/iso17025.jpeg", 
     link: "#" 
   },
   { 
     id: 5, 
     title: "Good Lab Practice", 
     category: "Kimia & K3", 
-    img: "public/Sertifikat Training Good Laboratory Practice.jpeg", 
+    img: "src/assets/img/sertif/Sertifikat Training Good Laboratory Practice.jpeg", 
     link: "#" 
   },
 ];
@@ -208,12 +207,11 @@ const Hero = () => {
           >
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full animate-pulse opacity-20 blur-2xl"></div>
-              {/* Pastikan file ini ada di public/img/profilardha2.png */}
               <img 
-                src="/img/profilardha2.png" 
+                src="src/assets/img/profilardha2.png" 
                 alt="Profile" 
                 className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10"
-                onError={(e) => { e.target.src = 'public/profilardha2.png' }}
+                onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800' }}
               />
             </div>
           </motion.div>
@@ -410,23 +408,21 @@ const Projects = () => {
                   <p className="text-sm text-gray-200 mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">{project.category}</p>
                   
                   <div className="flex gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                    {/* Tombol Lihat Detail / Link */}
                     <a 
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 rounded-full hover:bg-white/40 backdrop-blur-sm text-white transition-colors"
-                      title="Lihat Detail / Link"
+                      title="Lihat Link / Sertifikat"
                     >
                       <ExternalLink size={20} />
                     </a>
-                    
-                    {/* Tombol Download */}
                     <a 
                       href={project.img} 
-                      download={`${project.title}.jpg`}
+                      download 
+                      target="_blank"
                       className="p-2 bg-white/20 rounded-full hover:bg-white/40 backdrop-blur-sm text-white transition-colors"
-                      title="Unduh Sertifikat/Gambar"
+                      title="Unduh Gambar"
                     >
                       <Download size={20} />
                     </a>
