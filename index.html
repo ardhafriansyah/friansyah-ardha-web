@@ -40,7 +40,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #fcfcfc;
-            overflow-x: hidden; /* Mencegah bug horizontal scroll di HP */
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -66,7 +66,7 @@
         }
 
         /* Card Modernization */
-        .skill, .service-item, .team-item, .portfolio-item .portfolio-img {
+        .skill, .service-item, .team-item, .portfolio-item .portfolio-img, .card {
             border-radius: 15px;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -74,7 +74,7 @@
             border: 1px solid rgba(0,0,0,0.02);
         }
 
-        .skill:hover, .service-item:hover {
+        .skill:hover, .service-item:hover, .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15);
         }
@@ -84,14 +84,14 @@
             background: var(--gradient);
         }
 
-        /* Portfolio Hover - Pure CSS Fix */
+        /* Portfolio Hover */
         .portfolio-img {
             position: relative;
             overflow: hidden;
         }
         
         .portfolio-btn {
-            background: rgba(13, 110, 253, 0.85); /* Warna overlay transparan */
+            background: rgba(13, 110, 253, 0.85);
             backdrop-filter: blur(3px);
             transition: all 0.4s ease;
             opacity: 0;
@@ -118,7 +118,6 @@
             color: white !important;
         }
 
-        /* Responsif untuk Tab di HP */
         @media (max-width: 768px) {
             .nav-pills .nav-item {
                 flex: 1 1 100%;
@@ -172,18 +171,17 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-6L2BN0JVVE');
     </script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="z-index: 9999;">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow-sm py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary fw-bold m-0">Ardha</h1>
@@ -206,7 +204,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container-fluid hero-header my-6 mt-0" id="home">
         <div class="container pt-5">
             <div class="row g-5 align-items-center">
@@ -229,7 +226,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-xxl py-6" id="about">
         <div class="container">
             <div class="row g-5">
@@ -272,7 +268,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-xxl py-6 pb-5" id="skill">
         <div class="container">
             <div class="row g-5">
@@ -280,6 +275,7 @@
                     <h1 class="display-5 mb-5">Kemampuan & Pengalaman</h1>
                     <div class="row align-items-center">
                         <div class="col-12">
+                            
                             <div class="skill mb-4 p-3">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold"><i class="fas fa-flask me-2 text-primary"></i>Kimia dan Lab</h6>
@@ -319,6 +315,7 @@
                                     <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
                                 </div>
                             </div>
+
                         </div> 
                     </div>
                 </div>
@@ -335,10 +332,11 @@
                             <button class="nav-link w-100 py-3 text-dark" data-bs-toggle="pill" data-bs-target="#tab-3" type="button">Organisasi</button>
                         </li>
                     </ul>
+                    
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show active p-0">
                             <div class="row gy-5 gx-4">
-                                      <div class="col-sm-6">
+                                <div class="col-sm-6">
                                     <h5 class="fw-bold text-dark">Student Researcher</h5>
                                     <p class="text-primary mb-1 small"><i class="far fa-calendar-alt me-1"></i> Saat Ini</p>
                                     <h6 class="mb-0 text-muted">Badan Riset dan Inovasi Nasional (BRIN)</h6>
@@ -366,32 +364,25 @@
                             </div>
                         </div>
                         
-    <div id="tab-2" class="tab-pane fade p-0">
-    <div class="row gy-4 gx-4">
-
-        <div class="col-sm-6">
-            <h5 class="fw-bold">Penerima Djarum Beasiswa Plus</h5>
-            <p class="text-primary mb-1 small">Saat Ini</p>
-            <h6 class="mb-0 text-muted">Djarum Foundation</h6>
-        </div>
-
-        <div class="col-sm-6">
-            <h5 class="fw-bold">S1 Kimia</h5>
-            <p class="text-primary mb-1 small">Saat Ini</p>
-            <h6 class="mb-0 text-muted">Universitas Negeri Semarang</h6>
-        </div>
-
-        <div class="col-sm-6">
-            <h5 class="fw-bold">MIPA</h5>
-            <p class="text-primary mb-1 small">2020 – 2023</p>
-            <h6 class="mb-0 text-muted">SMAN 3 Kab. Tangerang</h6>
-        </div>
-
-    </div>
-</div>
-
-
-
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="row gy-4 gx-4">
+                                <div class="col-sm-6">
+                                    <h5 class="fw-bold">Penerima Djarum Beasiswa Plus</h5>
+                                    <p class="text-primary mb-1 small">Saat Ini</p>
+                                    <h6 class="mb-0 text-muted">Djarum Foundation</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="fw-bold">S1 Kimia</h5>
+                                    <p class="text-primary mb-1 small">Saat Ini</p>
+                                    <h6 class="mb-0 text-muted">Universitas Negeri Semarang</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="fw-bold">MIPA</h5>
+                                    <p class="text-primary mb-1 small">2020 – 2023</p>
+                                    <h6 class="mb-0 text-muted">SMAN 3 Kab. Tangerang</h6>
+                                </div>
+                            </div>
+                        </div>
 
                         <div id="tab-3" class="tab-pane fade p-0">
                             <div class="row gy-5 gx-4">
@@ -400,7 +391,6 @@
                                     <p class="text-primary mb-1 small">Jan 2025 - Jan 2026</p>
                                     <h6 class="mb-0 text-muted">Himpunan Mahasiswa Kimia UNNES</h6>
                                 </div>
-            
                                 <div class="col-sm-6">
                                     <h5 class="fw-bold">Ketua 1 OSIS</h5>
                                     <p class="text-primary mb-1 small">Des 2020 - Des 2022</p>
@@ -413,20 +403,18 @@
             </div>
         </div>
     </div>
-
     <div class="container-xxl py-6 pt-5 bg-light" id="project">
         <div class="container">
             <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
                     <h1 class="display-5 mb-0">Proyek & Sertifikasi</h1>
-                    <p class="text-muted mt-2">Kumpulan pencapaian, sertifikasi kompetensi, proyek desain, dan publikasi ilmiah.</p>
+                    <p class="text-muted mt-2">Kumpulan pencapaian, sertifikasi kompetensi, proyek desain, dan portofolio.</p>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
                         <li class="mx-3 active btn btn-sm btn-outline-primary rounded-pill border-0" data-filter="*">Semua</li>
                         <li class="mx-3 btn btn-sm btn-outline-primary rounded-pill border-0" data-filter=".first">Desain</li>
                         <li class="mx-3 btn btn-sm btn-outline-primary rounded-pill border-0" data-filter=".second">Kimia & K3</li>
-                        <li class="mx-3 btn btn-sm btn-outline-primary rounded-pill border-0" data-filter=".third">Publikasi Jurnal</li>
                     </ul>
                 </div>
             </div>
@@ -507,66 +495,69 @@
                     </div>
                 </div>
 
-
+            </div>
+        </div>
+    </div>
     <div class="container-xxl py-6 pt-5" id="publikasi-jurnal">
-    <div class="container">
-        <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <h1 class="display-5 mb-0">Publikasi Ilmiah</h1>
-                <p class="text-muted mt-2">Kumpulan artikel dan penelitian yang telah diterbitkan dalam jurnal akademik.</p>
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Publikasi Ilmiah</h1>
+                    <p class="text-muted mt-2">Kumpulan artikel dan penelitian yang telah diterbitkan dalam jurnal akademik.</p>
+                </div>
             </div>
-        </div>
 
-       <div class="row g-4">
-    
-    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="card border-0 shadow-sm rounded overflow-hidden h-100">
-            <img class="card-img-top w-100" src="img/jurnal-cover.jpg" alt="Cover Jurnal 1" style="height: 240px; object-fit: cover;">
-            
-            <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                    <small class="text-primary"><i class="far fa-calendar-alt me-2"></i>21 Jan 2025</small>
-                    <small class="ms-3"><i class="far fa-bookmark me-2"></i>Physics Science</small>
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden h-100">
+                        <img class="card-img-top w-100" src="img/jurnal-cover.jpg" alt="Cover Jurnal 1" style="height: 240px; object-fit: cover;">
+                        
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <small class="text-primary"><i class="far fa-calendar-alt me-2"></i>21 Jan 2025</small>
+                                <small class="ms-3"><i class="far fa-bookmark me-2"></i>Physics Science</small>
+                            </div>
+                            
+                            <h5 class="card-title mb-3">Pengaruh Tekanan Terhadap Volume Air Dan Minyak Pada Manometer Terbuka Berdasarkan Hukum Boyle</h5>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Penelitian ini membahas pengaruh tekanan terhadap volume cairan (air dan minyak) menggunakan manometer, serta mencoba melihat apakah prinsip Hukum Boyle (P ∝ 1/V) yang biasanya berlaku pada gas juga bisa diamati pada cairan. Hasilnya menunjukkan bahwa volume cairan tetap berkurang saat tekanan meningkat, meskipun sifat kompresibilitasnya berbeda.
+                            </p>
+                            
+                            <div class="mt-auto">
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="https://garuda.kemdiktisaintek.go.id/documents/detail/4979183" target="_blank">Baca Selengkapnya <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card border-0 shadow-sm rounded overflow-hidden h-100">
+                        <img class="card-img-top w-100" src="img/jurnal-cover.jpg" alt="Cover Jurnal 2" style="height: 240px; object-fit: cover;">
+                        
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <small class="text-primary"><i class="far fa-calendar-alt me-2"></i>16 April 2026</small>
+                                <small class="ms-3"><i class="far fa-bookmark me-2"></i>Material Science</small>
+                            </div>
+                            
+                            <h5 class="card-title mb-3">Advancing Sustainable and High-Performance Alkyd, Latex, and Epoxy Coatings: A Review</h5>
+                            
+                            <p class="card-text text-muted mb-4">
+                                Artikel ini membahas pengembangan pelapis ramah lingkungan berbasis air (alkid, lateks, dan epoksi) sebagai pengganti pelapis berbasis pelarut yang menghasilkan VOC tinggi, dengan tetap mempertahankan atau meningkatkan performa.
+                            </p>
+                            
+                            <div class="mt-auto">
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="https://jurnal.untan.ac.id/index.php/jkkmipa/article/view/100556" target="_blank">Baca Selengkapnya <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <h5 class="card-title mb-3">Pengaruh Tekanan Terhadap Volume Air Dan Minyak Pada Manometer Terbuka Berdasarkan Hukum Boyle</h5>
-                
-                <p class="card-text text-muted mb-4">
-                    Penelitian ini membahas pengaruh tekanan terhadap volume cairan (air dan minyak) menggunakan manometer, serta mencoba melihat apakah prinsip Hukum Boyle (P ∝ 1/V) yang biasanya berlaku pada gas juga bisa diamati pada cairan. Hasilnya menunjukkan bahwa volume cairan tetap berkurang saat tekanan meningkat, meskipun sifat kompresibilitasnya berbeda.
-                </p>
-                
-                <div class="mt-auto">
-                    <a class="btn btn-primary rounded-pill py-2 px-4" href="https://garuda.kemdiktisaintek.go.id/documents/detail/4979183" target="_blank">Baca Selengkapnya <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
             </div>
         </div>
     </div>
-
-    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-        <div class="card border-0 shadow-sm rounded overflow-hidden h-100">
-            <img class="card-img-top w-100" src="img/jurnal-cover.jpg" alt="Cover Jurnal 2" style="height: 240px; object-fit: cover;">
-            
-            <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                    <small class="text-primary"><i class="far fa-calendar-alt me-2"></i>16 April 2026</small>
-                    <small class="ms-3"><i class="far fa-bookmark me-2"></i>Material Science</small>
-                </div>
-                
-                <h5 class="card-title mb-3">Advancing Sustainable and High-Performance Alkyd, Latex, and Epoxy Coatings: A Review</h5>
-                
-                <p class="card-text text-muted mb-4">
-                    Artikel ini membahas pengembangan pelapis ramah lingkungan berbasis air (alkid, lateks, dan epoksi) sebagai pengganti pelapis berbasis pelarut yang menghasilkan VOC tinggi, dengan tetap mempertahankan atau meningkatkan performa.
-                </p>
-                
-                <div class="mt-auto">
-                    <a class="btn btn-primary rounded-pill py-2 px-4" href="https://jurnal.untan.ac.id/index.php/jkkmipa/article/view/100556" target="_blank">Baca Selengkapnya <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
     <div class="container-xxl pb-5 py-5" id="contact">
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -592,17 +583,15 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid bg-dark text-white py-4">
         <div class="container">
-           
-                <div class="col-md-6 text-center text-md-end">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
                     Designed with <i class="fa fa-heart text-danger"></i> by <a class="border-bottom text-secondary" href="#">Ardha</a>
                 </div>
             </div>
         </div>
     </div>
-
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top rounded-circle shadow"><i class="bi bi-arrow-up"></i></a>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
